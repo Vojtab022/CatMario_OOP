@@ -1,3 +1,4 @@
+from os import name
 import pygame
 from config import *
 
@@ -9,12 +10,22 @@ class Game:
 
     def handle_events(self):
         for event in pygame.event.get():
+            evt_name = pygame.event.event_name(event.type)
+
             if event.type == pygame.QUIT:
                 self.running = False
-            if event.type == pygame.KEYDOWN:
-                self.running == False
 
-    def update (self):
+            if event.type in (pygame.KEYDOWN, pygame.KEYUP):
+                evt_key = pygame.key.name(event.key)
+                print(f"{evt_name}: {evt_key}")
+
+            elif event.type == pygame.MOUSEMOTION:
+                print(f"{evt_name}: {event.pos}")
+
+            elif event.type in (pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP):
+                print(f"{evt_name}: {event.button} at {event.pos}")
+    
+    def update(self):
         pass
 
     def draw(self):
