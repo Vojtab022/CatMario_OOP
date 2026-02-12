@@ -7,5 +7,6 @@ class Platform(pygame.sprite.Sprite):
         self.image = pygame.Surface((width, height))
         self.image.fill(PLATFORM_COLOR)
         self.rect = self.image.get_rect()
-        self.x = x
-        self.y = y
+        self.rect = x
+        self.rect = y
+        
