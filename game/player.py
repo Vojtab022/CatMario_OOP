@@ -24,7 +24,7 @@ class Player(pygame.sprite.Sprite):
                     continue
         
         if not image_loaded:
-            self.image = pygame([PLAYER_WIDTH, PLAYER_HEIGHT])
+            self.image = pygame.Surface((PLAYER_WIDTH, PLAYER_HEIGHT))
             self.image.fill(PLAYER_COLOR)
 
         self.rect = self.image.get_rect()
