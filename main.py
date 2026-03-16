@@ -1,5 +1,5 @@
 import pygame
-from config import *
+from config import * # Alternativa: import config (config.proměna)
 from game.game import Game
 
 def main():
@@ -11,7 +11,6 @@ def main():
     game.run()
 
     pygame.quit()
-
 
 if __name__ == "__main__":
     main()

@@ -39,6 +39,6 @@ class Platform(pygame.sprite.Sprite):
             - Šířka 200px, výška 20px
             - Bude to "dlouhý tenký" obdélník
         """
-    
+        
     def draw(self, screen):
         screen.blit(self.image, self.rect)
